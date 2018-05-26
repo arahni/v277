@@ -1,0 +1,137 @@
+#footer
+  flex: 0 0 auto
+  background-color: $c_footer
+  color: $c_txt_white
+
+.footer-logo
+	text-align: right
+
+	@media screen and (max-width: 991px)
+		margin-bottom: 20px
+
+	@media screen and (max-width: 767px)
+		text-align: center
+
+.copyright-block
+
+	.textwidget
+		text:
+			align: center
+			transform: uppercase
+		font-size: 11px
+		padding:
+			top: 20px
+			bottom: 20px
+
+.copiryght
+	border:
+		top: 1px solid
+
+.footer-info
+	padding:
+		top: 40px
+		bottom: 45px
+
+	@media screen and (max-width: 767px)
+		padding:
+			bottom: 15px
+			top: 25px
+
+	.row
+		width: 100%
+		display: flex
+		align:
+			items: center
+		flex:
+			wrap: wrap
+
+.footer-widget-1
+	padding: 0
+	font:
+		size: 12px
+
+	p
+		margin: 0
+
+		@media screen and (max-width: 991px)
+			max-width: 250px
+			margin-bottom: 20px
+
+		@media screen and (max-width: 767px)
+			margin:
+				left: auto
+				right: auto
+			text-align: center
+
+.footer-menu
+	display: flex
+	justify-content: center
+	align-items: center
+	border:
+		left: 1px solid rgba(255, 255, 255, 0.1)
+		right: 1px solid rgba(255, 255, 255, 0.1)
+
+	ul
+		padding:
+			left: 0
+		margin: 0 auto
+		list-style: none
+		display: inline-block
+
+		@media screen and (max-width: 767px)
+			text-align: center
+
+		li
+			@media screen and (max-width: 767px)
+				padding: 5px 0
+
+		.current-menu-item
+
+			a
+				cursor: default
+				text-decoration: underline
+				pointer-events: none
+
+		a
+			font-size: 21px
+			color: $c_txt_white
+			text-transform: uppercase
+
+			&:hover,
+			&:focus,
+			&:active
+				text-decoration: none
+				color: $c_foter_hover
+
+	&:nth-child(3)
+
+		@media screen and (max-width: 991px)
+			border-left: none
+
+.social-link-title
+	margin: 0
+	text-align: center
+	font-size: 21px
+	font-weight: 600
+	text-transform: uppercase
+
+.social-link-list
+	display: flex
+	list-style: none
+	justify-content: center
+	flex-wrap: wrap
+	padding: 0
+	margin: 0
+
+	a
+		color: $c_txt_white
+		font-size: 30px
+		margin: 7px 15px
+
+		&:hover
+			color: $c_foter_hover
+
+.footer-widget-2
+
+	@media screen and (max-width: 767px)
+		margin-top: 20px

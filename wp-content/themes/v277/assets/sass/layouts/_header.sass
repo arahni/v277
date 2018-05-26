@@ -1,0 +1,202 @@
+.home
+	#header
+		position: absolute
+		left: 0
+		top: 0
+		background-image: none
+
+		@media screen and (max-width: 768px)
+			position: relative
+			top: auto
+			left: auto
+
+.header-mobile
+	display: none
+	background: url('../img/fender-back.png') 0 -70px
+
+	.mobile-menu-bottun
+		position: absolute
+		top: 50%
+		right: 23px
+		color: $c_txt_white
+		cursor: pointer
+		width: 36px
+		height: 36px
+		font-size: 36px
+		line-height: 36px
+		margin-top: -18px
+		text-align: center
+
+		&.is-open
+
+			.fa-times
+				opacity: 1
+				transition: all .8s
+
+			.fa-bars
+				opacity: 0
+				transition: all .8s
+
+		.fa-times
+			opacity: 0
+			transition: all .8s
+			position: absolute
+			top: -6px
+			left: 1px
+			font-size: 44px
+
+		.fa-bars
+			opacity: 1
+			transition: all .8s
+
+	.header-logo
+		height: 80px
+		padding:
+			top: 5px
+			bottom: 5px
+		text-align: center
+		background-color: $c_header_mobile
+
+		.logo__block
+			height: 70px
+
+			img
+				height: 70px !important
+				width: auto
+
+	@media screen and (max-width: 768px)
+		display: block
+
+#header
+	flex: 0 0 auto
+	width: 100%
+	z-index: 10
+	height: auto
+	position: relative
+
+	&::before
+		content: ""
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		background-color: $c_header
+
+	@media screen and (max-width: 768px)
+		height: auto
+
+.header-origin
+	display: flex
+	min:
+		height: 126px
+	justify-content: center
+	align-items: center
+
+	@media screen and (max-width: 768px)
+		display: none
+
+	.row
+		width: 100%
+		display: flex
+		align:
+			items: center
+		flex:
+			wrap: wrap
+
+	.header-menu
+		padding:
+			right: 0
+			left: 0
+		height: 100%
+
+	.main-menu
+		list-style: none
+		padding-left: 0
+		margin-bottom: 0
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		.menu-item
+			display: block
+			height: 66px
+			width: 170px
+
+			@media screen and (max-width: 991px)
+				height: 50px
+				width: 150px
+
+			a
+				background-color: $c_header
+				display: flex
+				height: 100%
+				width: 100%
+				justify-content: center
+				align-items: center
+				color: $c_txt_white
+				text-transform: uppercase
+				font-size: 21px
+				position: relative
+
+				&:active,
+				&:focus
+					text-decoration: none
+
+				&::before
+					content: ""
+					position: absolute
+					width: 100%
+					height: 0
+					top: 50%
+					left: 0
+					background-color: $c_black
+					z-index: -1
+					transition: all .3s
+
+				&:hover
+					@extend :active
+
+					&::before
+						transition: all .3s
+						height: 100%
+						top: 0
+
+		.current-menu-item
+			pointer-events: none
+
+			a
+				text-decoration: underline
+
+.logo__block
+	display: inline-block
+
+.mobile-menu-box
+	padding: 0
+
+#mobile-menu
+	display: none
+	padding: 6px 0 6px
+	margin: 0
+	background-color: $c_header_mobile
+	border-top: 1px solid $c_txt_white
+
+	.current_page_item
+
+		a
+			text-decoration: underline
+			pointer-events: none
+
+	.menu-item
+		text-align: center
+		padding: 6px 0
+
+
+		a
+			font-size: 21px
+			text-transform: uppercase
+			color: $c_txt_white
+
+			&:hover
+				text-decoration: none
+				color: $c_foter_hover
